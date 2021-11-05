@@ -99,8 +99,7 @@ release分支有两种使用策略，第一种遵循`gitFlow`流程, 第二种�
 
 当前前端应用的稳定版本和GZB版本绑定. release分支不一定存在, 一般情况下, 只会在前端版本稳定后, 将其合并到master, 并创建tag标记. 而只有需要为指定的正式版本修复bug时才会创建release分支
 
-![release branch](assets/release-branch.png)
-
+ 
 + 场景: 需要为某个正式版本修复bug(hotFix)时, 从master的对应tag中checkout release分支
 + 命名规范: `release/{GZB_version}` 外部人员只会关注GZB版本
 + 如何修复
@@ -108,8 +107,7 @@ release分支有两种使用策略，第一种遵循`gitFlow`流程, 第二种�
   - 如果bug在新版本无法复现. 比如新版本升级了依赖. 那么在release分支直接修复即可
 
 #### 自定义风格release分支
-
-![release branch](assets/release-branch2.png)
+ 
 
 当要发布一个工作宝对应的版本时（或者一开始开发时）从dev分支checkout出一个开发分支，后续需要对外发布时，将dev分支合并到release分支, 并打上版本tag. 后面会介绍到后端开发和自动交付机制这种分支模式。
 
